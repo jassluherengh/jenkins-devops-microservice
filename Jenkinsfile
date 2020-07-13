@@ -21,10 +21,10 @@ pipeline{
 		always{
 			echo "I am always called"
 		}
-		successful{
+		success{
 			echo "build successful"
 		}
-		failed{
+		failure{
 			echo "Build failed"
 		}
 	}
