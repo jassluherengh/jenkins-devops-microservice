@@ -17,5 +17,16 @@ pipeline{
 			}			
 		}
 	}
+	post{
+		always{
+			echo "I am always called"
+		}
+		sucess{
+			echo "build successful"
+		}
+		failed{
+			echo "Build failed"
+		}
+	}
 
 }
