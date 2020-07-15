@@ -1,6 +1,7 @@
 pipeline{
 	agent {
-        docker { image 'maven:3-alpine' }
+        docker { dir('C:\\Program Files (x86)\\Jenkins\\workspace\\jenkins-devops-microservice-pipeline') {
+			image 'maven:3-alpine' }
     }
 	stages{
 		stage('Build'){
