@@ -8,8 +8,8 @@ pipeline{
 	stages{
 		stage('Build'){
 			steps{
-				bash 'mvn --version'
-				bash 'docker version'
+				cmd 'mvn --version'
+				cmd 'docker version'
 				echo "Path -$PATH "
 			}			
 		}
