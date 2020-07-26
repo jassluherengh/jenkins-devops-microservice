@@ -8,8 +8,6 @@ pipeline{
 	stages{
 		stage('Build'){
 			steps{
-				cmd 'mvn --version'
-				cmd 'docker version'
 				echo "Path -$PATH "
 			}			
 		}
@@ -26,10 +24,10 @@ pipeline{
 	}
 	post{
 		always{
-			echo "I am always called"
+			echo "I am awsome, I am always called"
 		}
 		success{
-			echo "build successful"
+			echo "build successful When you are success"
 		}
 		failure{
 			echo "Build failed"
