@@ -1,4 +1,4 @@
-pipeline{
+gitpipeline{
 	agent any
 //	environment{
 //		dockerHome = tool 'myDocker'
@@ -18,7 +18,7 @@ pipeline{
 		}
 		stage('Integeration Test'){
 			steps{
-				echo "Integeration Test"			
+				echo "Integeration Test Jissu"			
 			}			
 		}
 	}
