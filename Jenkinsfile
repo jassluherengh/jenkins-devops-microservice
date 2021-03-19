@@ -15,18 +15,23 @@ pipeline{
 	stages{
 		stage('Build'){
 			steps{
-				echo "Path -$PATH "
-				// sh 'mvn --version'
+				step{
+					echo "Path -$PATH "
+				}
 			}			
 		}
 		stage('Test'){
 			steps{
-				echo "Test"
+				step{
+					echo "Test"
+				}
 			}			
 		}
 		stage('Integeration Test'){
 			steps{
-				echo "Integeration Test Jissu"			
+				step{
+					echo "Integeration Test Jissu"			
+				}
 			}			
 		}
 	}
