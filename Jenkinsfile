@@ -15,23 +15,23 @@ pipeline{
 	stages{
 		stage('Build'){
 			steps{
-				step{
+				
 					echo "Path -$PATH "
-				}
+				
 			}			
 		}
 		stage('Test'){
 			steps{
-				step{
+				
 					echo "Test"
-				}
+				
 			}			
 		}
 		stage('Integeration Test'){
 			steps{
-				step{
+				
 					echo "Integeration Test Jissu"			
-				}
+				
 			}			
 		}
 	}
