@@ -1,30 +1,14 @@
 pipeline{
-	agent {
-        docker {
-            image 'maven:3-alpine'
-            args '-v $HOME/.m2:/root/.m2'
-        }
-    }
-	//agent { docker { image 'maven:3.6.3'
-//			args '-v $HOME/.m2:/root/.m2'
-//			 }}
-	// agent any
-	// agent { docker { image 'maven:3.6.3'} }
-//	environment{
-//		dockerHome = tool 'myDocker'
-//		mavenHome = tool 'myMaven'
-//		PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
-//	}
-	// agent {docker { image 'maven:latest'}}
-	// { 
-	//	docker { 
-	//		image 'maven:3.6.3'
-	//	}
-	// }
+	//agent {
+    //    docker {
+    //        image 'maven:3-alpine'
+    //    }
+    //}
+	agent any
 	stages{
 		stage('Build'){
 			steps{
-				
+					sh 'mvn --version'
 					echo "Path -$PATH "
 				
 			}			
