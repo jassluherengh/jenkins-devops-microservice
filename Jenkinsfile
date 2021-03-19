@@ -1,5 +1,13 @@
 pipeline{
-	agent { docker { image 'maven:3.6.3'}}
+	agent {
+        docker {
+            image 'maven:3-alpine'
+            args '-v $HOME/.m2:/root/.m2'
+        }
+    }
+	//agent { docker { image 'maven:3.6.3'
+//			args '-v $HOME/.m2:/root/.m2'
+//			 }}
 	// agent any
 	// agent { docker { image 'maven:3.6.3'} }
 //	environment{
