@@ -1,10 +1,11 @@
 pipeline{
-	//agent {
-    //    docker {
-    //        image 'maven:3-alpine'
-    //    }
-    //}
-	agent any
+	agent {
+        docker {
+            image 'maven:3-alpine'
+			args '-u root:root'
+        }
+    }
+	//agent any
 	stages{
 		stage('Build'){
 			steps{
